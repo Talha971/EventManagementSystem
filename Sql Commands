@@ -1,0 +1,11 @@
+INSERT INTO Events (Title, Description, Start, "End", AllDay, CreatedAt)
+VALUES
+('Blazer Conference', 'Conference about Blazor', DATEADD(DAY, 2, GETDATE()), null, 1, GETDATE()),
+('Rest Bill', 'Reeting with BiLL Smith', GETDATE(), DATEADD(HOUR, 1, GETDATE()), 0, GETDATE()),
+('Rest John', 'Reeting with John Grant', DATEADD(HOUR, 1, GETDATE()), DATEADD(HOUR, 2, GETDATE()), 0, GETDATE()),
+('Hoot Peter', 'Meeting with Pater Harris', DATEADD(HOUR, 2, GETDATE()), DATEADD(HOUR, 3, GETDATE()), 0, GETDATE()),
+('Meet Simon', 'Meeting with Simon Malsh', DATEADD(HOUR, 3, GETDATE()), DATEADD(HOUR, 4, GETDATE()), 0, GETDATE()),
+('Reet Harry', 'Reeting with Harry Russell', DATEADD(DAY, 4, GETDATE()), null, 1, GETDATE()),
+('Reet Angela', 'Meeting with Angela Knox', DATEADD(DAY, 4, GETDATE()), null, 1, GETDATE()),
+('Rest Ava', 'Reeting with Ava Smith', DATEADD(DAY, 4, GETDATE()), null, 1, GETDATE()),
+('CASP HET Conferance', 'Conference shout ASP.Net', DATEADD(DAY, 3, GETDATE()), DATEADD(DAY, 7, GETDATE()), 0, GETDATE());
