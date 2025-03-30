@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using EventManagementSystem.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace EventManagementSystem.Services
 {
@@ -7,5 +8,7 @@ namespace EventManagementSystem.Services
         public ApplicationDbContext(DbContextOptions options) : base(options)
         {
         }
+
+        public required DbSet<Event> Events { get; set; }    
     }
 }
