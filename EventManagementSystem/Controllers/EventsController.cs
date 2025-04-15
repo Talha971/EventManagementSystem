@@ -52,7 +52,7 @@ namespace EventManagementSystem.Controllers
 
             return Ok(evt);
         }
-        [HttpPost("{id}")]
+        [HttpPut("{id}")]
         public IActionResult EditEvent(int id, EventDto eventDto)
         {
             var evt = context.Events.Find(id);
