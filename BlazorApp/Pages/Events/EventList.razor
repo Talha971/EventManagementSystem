@@ -1,0 +1,12 @@
+﻿@page "/Events"
+
+<h1 class="mb-3">Event List</h1>
+
+@inject HttpClient http
+
+@code {
+	private List<Event>? events;
+	protected override async Task OnInitializedAsync(){
+		events = await http.GetFromJsonAsync<List<Event>>("api/Events");
+	}
+}
