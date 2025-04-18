@@ -42,7 +42,7 @@ else{
                         <a class="btn btn-primary btn-sm" href="/Events/Edit/@evt.Id">
                             Edit
                         </a>
-                        <button class="btn btn-danger btn-sm">
+                        <button class="btn btn-danger btn-sm" @onclick="async () => await DeleteEvent(evt.Id)">
                             Delete
                         </button>
                     </td>
@@ -62,4 +62,12 @@ else{
 	protected override async Task OnInitializedAsync(){
 		events = await http.GetFromJsonAsync<List<Event>>("api/Events");
 	}
+
+
+    private async Task DeleteEvent(int id)
+    {
+        await http.DeleteAsync("api/Events/" + id);
+        events = await http.GetFromJsonAsync<List<Event>>("api/Events");
+    }
+
 }
